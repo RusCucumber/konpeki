@@ -46,7 +46,7 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     if event.message.text == "紺碧の空":
-        response = Konpeki().get_url()
+        response = Konpeki().get_url() ## DB処理
     else:
         response = "「紺碧の空」と打て！"
 
