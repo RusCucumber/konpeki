@@ -1,6 +1,8 @@
 from flask import Flask, request, abort
 import os
 
+from mod import Konpeki
+
 from linebot import (
     LineBotApi, WebhookHandler
 )
@@ -43,9 +45,15 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
+    if event.message.text == "紺碧の空":
+        response = Konpeki().get_url()
+    else:
+        response = "「紺碧の空」と打て！"
+
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text=event.message.text))
+        TextSendMessage(text=response)
+    )
 
 if __name__ == "__main__":
     #app.run()
