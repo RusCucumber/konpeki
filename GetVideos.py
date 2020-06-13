@@ -4,7 +4,7 @@ from apiclient.discovery import build
 f = open("konpeki_no_sora.csv", "w")
 writer = csv.writer(f)
 
-YOUTUBE_API_KEY = "AIzaSyDfa1W4KynnG1YDXX5mPqrzw-slAYHPVtc"
+YOUTUBE_API_KEY = "access_token"
 
 youtube = build("youtube", "v3", developerKey=YOUTUBE_API_KEY)
 
