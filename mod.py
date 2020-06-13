@@ -20,12 +20,12 @@ class Konpeki:
             return "NG"
 
     def __db(self):
-        DBMS = "postgresql"
-        USER = "hzgkkbhhfsktbx"
-        PASS = "59daad22673fac8ce670d17cefb4db6d8f2e4210f93772d40a1ca4765771e68d"
-        HOST = "ec2-3-231-16-122.compute-1.amazonaws.com"
-        DB = "d74j7rocds33bn"
-        TABLE = "konpeki"
+        DBMS = "dbms"
+        USER = "user_name"
+        PASS = "password"
+        HOST = "host"
+        DB = "db_name"
+        TABLE = "table"
         db = dataset.connect("{0}://{1}:{2}@{3}/{4}".format(DBMS, USER, PASS, HOST, DB))
         table = db[TABLE]
         return table
